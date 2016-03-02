@@ -62,6 +62,7 @@ ggplot(data = gg_data, aes(x = year, y = value, colour = variable)) + # colour, 
 # what about the y-labelling?  
   scale_y_continuous(breaks=seq(0,30,5),
                      labels=abs(seq(0,30,5))) +
-  theme(axis.text.x = element_text(angle = - 45, vjust = -0.5), axis.text.y = element_text(angle = -45, vjust = 0.5)) +
+  theme(axis.text.x = element_text(angle = - 45, vjust = -0.5), axis.text.y = element_text(angle = -45, vjust = 0.5)) + 
 # changing colours manually  
-  scale_fill_manual(values = c( "A" = "#6FCCF3", "B" = "#FF8705", "C" = "#E557F5", "D" = "#8BFF92"), drop = F)
+  scale_colour_manual(values = c( "A" = "#6FCCF3", "B" = "#FF8705", "C" = "#E557F5", "D" = "#8BFF92"), drop = F)
+# the same works for geom_bar and geom_area if you use "scale_fill_manual() instead!
